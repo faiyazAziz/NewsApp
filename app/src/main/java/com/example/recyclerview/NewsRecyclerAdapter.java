@@ -85,8 +85,6 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
                 }else{
                     favouriteDatabaseHelper.favouriteDao().deleteNews(currentNews.getTitle());
                     holder.favButton.setBackgroundResource(R.drawable.fav_icon_border);
-                    mArr.remove(currentNews);
-                    notifyItemRemoved(position);
                 }
             }
         });
